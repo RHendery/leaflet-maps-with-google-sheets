@@ -781,7 +781,7 @@ $(window).on('load', function() {
 
     var polylinesLegend = L.control.layers(null, null, {
       position: pos,
-      collapsed: false,
+      collapsed: true,
     });
 
     for (i = 0; i < p.length; i++) {
