@@ -259,7 +259,6 @@ select {
   justify-content: center;
   align-items: center;
   padding-top: 10px;
-  overflow: scroll;
 }
 
 span.legend-arrow {
@@ -277,7 +276,7 @@ span.legend-icon {
 .ladder {
   width: 180px;
   margin-top: 0 !important;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .ladder h6.minimize ~ div,
