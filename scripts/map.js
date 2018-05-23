@@ -165,7 +165,7 @@ $(window).on('load', function() {
         : getSetting('_pointsLegendPos');
 
       var pointsLegend = L.control.layers(null, layers, {
-        collapsed: true,
+        collapsed: false,
         position: pos,
       });
 
