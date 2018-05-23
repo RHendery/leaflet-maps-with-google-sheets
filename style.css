@@ -43,12 +43,11 @@ h6 {
   box-shadow: 0 1px 5px rgba(0,0,0,0.4);
   color: #333;
   border-radius: 5px;
-  height: 30%;
-  overflow: scroll;
 }
 
 .leaflet-control-geocoder {
   z-index: 9999;
+  overflow: scroll;
 }
 
 form {
