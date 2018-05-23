@@ -68,7 +68,6 @@ form {
 
 .leaflet-popup-content {
   min-width: 150px;
-  overflow: scroll;
 }
 
 .leaflet-popup-content img {
@@ -260,6 +259,7 @@ select {
   justify-content: center;
   align-items: center;
   padding-top: 10px;
+  overflow: scroll;
 }
 
 span.legend-arrow {
