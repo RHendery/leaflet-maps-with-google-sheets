@@ -4,13 +4,13 @@ body {
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  overflow: scroll;
 }
 
 #map {
   width: 100vw;
   height: 100vh;
   visibility: hidden;
+  overflow: scroll;
 }
 
 h3 {
