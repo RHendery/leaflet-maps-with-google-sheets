@@ -52,11 +52,6 @@ h6 {
 .leaflet-control-layers {
 }
 
-.leaflet-control-layers-expanded {
-  height: 100;
-  overflow: scroll;
-}
-
 form {
   margin-top: 2px;
 }
@@ -284,7 +279,8 @@ span.legend-icon {
 .ladder {
   width: 180px;
   margin-top: 0 !important;
-  overflow: hidden;
+  height: 100;
+  overflow: scroll;
 }
 
 .ladder h6.minimize ~ div,
