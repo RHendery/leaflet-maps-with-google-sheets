@@ -50,6 +50,9 @@ h6 {
 }
 
 .leaflet-control-layers {
+}
+
+.leaflet-control-layers-expanded {
   height: 30%;
   overflow: scroll;
 }
