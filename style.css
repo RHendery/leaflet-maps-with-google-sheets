@@ -279,8 +279,7 @@ span.legend-icon {
 .ladder {
   width: 180px;
   margin-top: 0 !important;
-  height: 100;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .ladder h6.minimize ~ div,
