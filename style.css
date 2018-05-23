@@ -231,6 +231,7 @@ form {
 /* Map Table */
 div.dataTables_scrollBody {
   border: 0 !important;
+  overflow: scroll;
 }
 
 div.dataTables_scrollHead {
@@ -276,7 +277,7 @@ span.legend-icon {
 .ladder {
   width: 180px;
   margin-top: 0 !important;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .ladder h6.minimize ~ div,
