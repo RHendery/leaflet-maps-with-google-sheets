@@ -4,6 +4,7 @@ body {
   margin: 0 auto;
   height: 100%;
   width: 100%;
+  overflow: scroll;
 }
 
 #map {
@@ -231,7 +232,6 @@ form {
 /* Map Table */
 div.dataTables_scrollBody {
   border: 0 !important;
-  overflow: scroll;
 }
 
 div.dataTables_scrollHead {
