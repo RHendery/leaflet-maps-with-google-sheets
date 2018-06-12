@@ -9,6 +9,7 @@ $(window).on('load', function() {
   var completePoints = false;
   var completePolygons = false;
   var completePolylines = false;
+ // var layerList = []  // for toggling
 
   /**
    * Returns an Awesome marker with specified parameters
@@ -80,6 +81,29 @@ $(window).on('load', function() {
         layerNamesFromSpreadsheet.push(pointLayerNameFromSpreadsheet);
       }
     }
+    
+    ////////////////    Turns Layers on/off by button
+   
+
+    function turnLayerOn(layerList){ 
+        for (i = 0; i < layerList.length; i++) { 
+
+            if(!map.hasLayer(layerList[i])) {  //note the ! for off.
+                map.addLayer(layerList[i]);
+            }
+        }
+
+    }
+    function turnLayerOff(layerList){ 
+        for (i = 0; i < layerList.length; i++) { 
+
+            if(map.hasLayer(layerList[i])) {  
+                map.removeLayer(layerList[i]);
+            }
+        }
+
+    }
+/////////////////////////////
 
     // if none of the points have named layers or if there was only one name, return no layers
     if (layerNamesFromSpreadsheet.length === 1) {
