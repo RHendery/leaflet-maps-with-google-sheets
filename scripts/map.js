@@ -209,6 +209,9 @@ $(window).on('load', function() {
       $('#points-legend h6').prepend('<span class="legend-icon"><i class="fa '
         + getSetting('_pointsLegendIcon') + '"></i></span>');
     }
+    //added to try to get toggle all working
+    $('#points-legend').prepend('<input type="button" value="Turn on Layers" onclick="turnLayerOn()" /> <input type="button" value="Turn off Layers" onclick="turnLayerOff()" />');
+  //added the above to try to toggle things
 
     var displayTable = getSetting('_displayTable') == 'on' ? true : false;
 
