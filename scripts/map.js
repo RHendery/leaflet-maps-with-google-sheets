@@ -9,7 +9,7 @@ $(window).on('load', function() {
   var completePoints = false;
   var completePolygons = false;
   var completePolylines = false;
- // var layerList = []  // for toggling
+  var layerList = []  // for toggling
 
   /**
    * Returns an Awesome marker with specified parameters
@@ -82,10 +82,25 @@ $(window).on('load', function() {
       }
     }
     
+
+    // if none of the points have named layers or if there was only one name, return no layers
+    if (layerNamesFromSpreadsheet.length === 1) {
+      layers = undefined;
+    } else {
+      for (var i in layerNamesFromSpreadsheet) {
+        layerList = layerNameFromSpreadsheet; //added to save this list into a global variable
+        var layerNameFromSpreadsheet = layerNamesFromSpreadsheet[i];
+        layers[layerNameFromSpreadsheet] = L.layerGroup();
+        layers[layerNameFromSpreadsheet].addTo(map);
+      }
+    }
+    return layers;
+  }
+  
     ////////////////    Turns Layers on/off by button
    
 
-    function turnLayerOn(layerList){ 
+    function turnLayerOn(){ 
         for (i = 0; i < layerList.length; i++) { 
 
             if(!map.hasLayer(layerList[i])) {  //note the ! for off.
@@ -94,7 +109,7 @@ $(window).on('load', function() {
         }
 
     }
-    function turnLayerOff(layerList){ 
+    function turnLayerOff(){ 
         for (i = 0; i < layerList.length; i++) { 
 
             if(map.hasLayer(layerList[i])) {  
@@ -105,18 +120,6 @@ $(window).on('load', function() {
     }
 /////////////////////////////
 
-    // if none of the points have named layers or if there was only one name, return no layers
-    if (layerNamesFromSpreadsheet.length === 1) {
-      layers = undefined;
-    } else {
-      for (var i in layerNamesFromSpreadsheet) {
-        var layerNameFromSpreadsheet = layerNamesFromSpreadsheet[i];
-        layers[layerNameFromSpreadsheet] = L.layerGroup();
-        layers[layerNameFromSpreadsheet].addTo(map);
-      }
-    }
-    return layers;
-  }
 
   /**
    * Assigns points to appropriate layers and clusters them if needed
