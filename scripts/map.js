@@ -91,7 +91,7 @@ $(window).on('load', function() {
         layerList = layerNameFromSpreadsheet; //added to save this list into a global variable
         var layerNameFromSpreadsheet = layerNamesFromSpreadsheet[i];
         layers[layerNameFromSpreadsheet] = L.layerGroup();
-        layers[layerNameFromSpreadsheet].addTo(map);
+      //  layers[layerNameFromSpreadsheet].addTo(map);
       }
     }
     return layers;
