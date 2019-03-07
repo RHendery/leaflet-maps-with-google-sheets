@@ -1,7 +1,5 @@
-# Leaflet Maps with Google Sheets
-Customize Leaflet maps with a linked Google Sheets template and GeoJSON data on GitHub
-
-![Preview](preview.jpg)
+# A Leaflet Map with Google Sheets for the Waves of Words Project
+Customized Leaflet map with a linked Google Sheets template and GeoJSON data on GitHub
 
 ## Live links (replace with your own)
 - Leaflet Map  https://rhendery.github.io/leaflet-maps-with-google-sheets/
